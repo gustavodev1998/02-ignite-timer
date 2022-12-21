@@ -5,6 +5,10 @@ npm i @types/styled-components -D
 npm i eslint -D
 npm i @rocketseat/eslint-config -D
 npm i react-router-dom
+npm i react-hook-form
+
+npm i zod
+npm i @hookform/resolvers
 
 # Extensions
 
