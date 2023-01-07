@@ -44,7 +44,7 @@ export function cyclesReducer(state: CyclesState, action: ActionTypesProps) {
       }; */
 
       const currentCycleIndex = state.cycles.findIndex((cycle) => {
-        cycle.id === state.activeCycleId;
+        return cycle.id === state.activeCycleId;
       });
 
       if (currentCycleIndex < 0) {
@@ -52,8 +52,9 @@ export function cyclesReducer(state: CyclesState, action: ActionTypesProps) {
       }
 
       return produce(state, (draft) => {
-        draft.cycles[currentCycleIndex].interruptedDate = new Date();
+        document.title = `Ignite Timer`;
         draft.activeCycleId = null;
+        draft.cycles[currentCycleIndex].interruptedDate = new Date();
       });
     }
     case ActionTypes.MARK_CURRENT_CYCLE_AS_FINISHED: {
@@ -70,7 +71,7 @@ export function cyclesReducer(state: CyclesState, action: ActionTypesProps) {
       }; */
 
       const currentCycleIndex = state.cycles.findIndex((cycle) => {
-        cycle.id === state.activeCycleId;
+        return cycle.id === state.activeCycleId;
       });
 
       if (currentCycleIndex < 0) {
@@ -78,8 +79,9 @@ export function cyclesReducer(state: CyclesState, action: ActionTypesProps) {
       }
 
       return produce(state, (draft) => {
-        draft.cycles[currentCycleIndex].finishedDate = new Date();
+        document.title = `Ignite Timer`;
         draft.activeCycleId = null;
+        draft.cycles[currentCycleIndex].finishedDate = new Date();
       });
     }
 

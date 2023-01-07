@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
-export const LayoutContainer = styled.div`
+interface DefaultLayoutProps {
+  maxSize: number;
+}
+
+export const LayoutContainer = styled.div<DefaultLayoutProps>`
   max-width: 74rem;
-  height: calc(100vh - 10rem);
+
+  height: ${(props) => (props.maxSize <= 9 ? "calc(100vh - 10rem)" : "auto")};
   margin: 5rem auto;
   padding: 2.5rem;
 
