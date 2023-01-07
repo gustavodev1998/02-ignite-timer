@@ -35,7 +35,7 @@ $ npm run dev
 ```
 
 ## :link: Vercel
-To check it out acess: <a target="_blank" href="https://todo-list-ts-one.vercel.app/">Web site</a>
+To check it out acess: <a target="_blank" href="https://02-ignite-timer-bice.vercel.app/">Web site</a>
 
 ## 🔖 Layout
 
